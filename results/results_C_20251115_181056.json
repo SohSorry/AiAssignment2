@@ -1,0 +1,46 @@
+{
+    "model": "CNN_MFCC_Baseline_C",
+    "student": "Saneha",
+    "hyperparameters": {
+        "model_type": "CNN-MFCC",
+        "num_classes": 8,
+        "learning_rate": 0.0005,
+        "architecture": "3 Conv2D blocks + 1 Dense layer (Simplified)",
+        "conv_filters": [
+            16,
+            32,
+            64
+        ],
+        "dense_units": [
+            128
+        ],
+        "dropout_rates": [
+            0.3,
+            0.3,
+            0.5,
+            0.5
+        ],
+        "regularization": "L2 (0.01)",
+        "pooling": "MaxPooling2D + GlobalAveragePooling2D",
+        "batch_normalization": true,
+        "note": "Simplified baseline for realistic performance (~50-55% accuracy)"
+    },
+    "training_args": {
+        "data_path": "D:\\downloads\\SAND_Challenge_task1_dataset\\task1\\training",
+        "batch_size": 32,
+        "epochs": 20,
+        "learning_rate": 0.0005,
+        "max_duration": 5.0,
+        "n_mfcc": 40,
+        "results_dir": "results",
+        "dry_run": false
+    },
+    "test_loss": 1.2382762432098389,
+    "test_accuracy": 0.6845329403877258,
+    "test_f1_macro": 0.6796253414992182,
+    "best_val_accuracy": 0.6995412707328796,
+    "best_val_loss": 1.2211124897003174,
+    "total_epochs": 20,
+    "timestamp": "20251115_181056",
+    "note": "Realistic baseline with simplified architecture (~50-55% accuracy target)"
+}
